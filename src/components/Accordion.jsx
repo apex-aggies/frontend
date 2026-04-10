@@ -12,7 +12,7 @@ const styles = {
   },
 };
 
-const Accordion = ({ humanReview, title, score, level, packetID }) => {
+const Accordion = ({ title, score, level, packetID, data }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -20,10 +20,10 @@ const Accordion = ({ humanReview, title, score, level, packetID }) => {
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
         <div className="title-right">
           <div></div>
-          <div>Applicant: {title}</div>
+          <div>Applicant: {data?.applicant_id}</div>
         </div>
         <div className='title-left'>
-          <div classname="accordion-score">{score}</div>
+          <div classname="accordion-score">{score}%</div>
           <div className="accordion-level" style={styles.greenColor}>{level}</div>
         </div>
       </div>
