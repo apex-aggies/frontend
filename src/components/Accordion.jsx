@@ -12,7 +12,16 @@ const styles = {
   },
 };
 
-const Accordion = ({ title, score, level, packetID, data }) => {
+function getLevelStyle(level) {
+  switch (level?.toLowerCase()) {
+    case "green":  return styles.greenColor;
+    case "yellow": return styles.yellowColor;
+    case "red":    return styles.redColor;
+    default:       return {};
+  }
+}
+
+const Accordion = ({ data }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -23,16 +32,26 @@ const Accordion = ({ title, score, level, packetID, data }) => {
           <div>Applicant: {data?.applicant_id}</div>
         </div>
         <div className='title-left'>
-          <div classname="accordion-score">{score}%</div>
-          <div className="accordion-level" style={styles.greenColor}>{level}</div>
+          <div classname="accordion-score">{data?.risk_score}%</div>
+          <div className="accordion-level" style={getLevelStyle(data?.risk_level)}>
+            
+          </div>
         </div>
       </div>
         {isActive && <div className="accordion-content">
           <ul>
-            <li><span>PackeID:</span> <span>{packetID}</span></li>
+            <li><span>PackeID:</span> <span>{data?.packet_id}</span></li>
             <li>Triggered Rules:</li>
             <ul>
-              <li><span>broken rule</span><span>50pts</span></li>
+              {data?.triggered_rules.map((item, index) => (
+                <li>
+                  <div>
+                    <span>{item.name}</span>
+                    <div className="sub-field">{item.reason}</div>
+                  </div>
+                  <span>{item.points}</span>
+                </li>
+              ))}
             </ul>
           </ul>
           

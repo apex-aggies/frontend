@@ -5,9 +5,10 @@ function Applicant({data}) {
     return (
         <div className='Card'>
             <div className="header">Second Look ATS Auditing Tool</div>
-            
             <div className="accordion">
-                <Accordion data={data} />
+                {data?.data.map((item, index) => (
+                    <Accordion key={index} data={item} />
+                ))}
             </div>
         </div>
     )

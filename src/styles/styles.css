@@ -133,3 +133,9 @@ li:nth-child(even) {
   font-weight: 500;
   color: #1a4f63;
 }
+
+.sub-field {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
