@@ -1,0 +1,81 @@
+* {
+  list-style-type: none;
+}
+
+.Card {
+  border: 1px solid #21aeca;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 600px;
+  margin: 2rem auto;
+  max-height: 400px;   /* adjust to whatever height you want */
+  overflow-y: auto;    /* scrolls vertically when content overflows */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+li:nth-child(odd) {
+  background-color: skyblue;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: solid #21aeca;
+}
+
+.accordion-title:hover {
+  background-color: #3ab4cc;
+}
+
+.accordion-title, .accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: lightblue;
+  width: 93%;
+  margin: 0 auto;
+
+}
+
+.accordion-level {
+  width: 20px;
+  height: 20px;
+  border: solid #21aeca;
+}
+
+.title-right, .title-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
