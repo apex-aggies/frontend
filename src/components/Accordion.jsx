@@ -32,7 +32,7 @@ const Accordion = ({ data }) => {
           <div>Applicant: {data?.applicant_id}</div>
         </div>
         <div className='title-left'>
-          <div classname="accordion-score">{data?.risk_score}%</div>
+          <div className="accordion-score">{data?.risk_score}%</div>
           <div className="accordion-level" style={getLevelStyle(data?.risk_level)}>
             
           </div>
@@ -40,11 +40,11 @@ const Accordion = ({ data }) => {
       </div>
         {isActive && <div className="accordion-content">
           <ul>
-            <li><span>PackeID:</span> <span>{data?.packet_id}</span></li>
+            <li><span>PacketID:</span> <span>{data?.packet_id}</span></li>
             <li>Triggered Rules:</li>
             <ul>
               {data?.triggered_rules.map((item, index) => (
-                <li>
+                <li key={index}>
                   <div>
                     <span>{item.name}</span>
                     <div className="sub-field">{item.reason}</div>

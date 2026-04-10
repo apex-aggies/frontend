@@ -1,5 +1,6 @@
 ---
 import Applicant from "../components/Applicant.jsx";
+import Header from "../components/Header.jsx";
 import "../styles/styles.css";
 
 let data = null;
@@ -30,6 +31,7 @@ try {
     <title>Second Look</title>
   </head>
   <body>
+    <Header client:load />
     <Applicant client:load data={data} />
   </body>
 </html>
