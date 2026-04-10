@@ -12,7 +12,7 @@ const styles = {
   },
 };
 
-const Accordion = ({ humanReview, title, score, level, content }) => {
+const Accordion = ({ humanReview, title, score, level, packetID }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ const Accordion = ({ humanReview, title, score, level, content }) => {
       </div>
         {isActive && <div className="accordion-content">
           <ul>
-            <li><span>PackeID:</span> <span>1312</span></li>
+            <li><span>PackeID:</span> <span>{packetID}</span></li>
             <li>Triggered Rules:</li>
             <ul>
               <li><span>broken rule</span><span>50pts</span></li>
