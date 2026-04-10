@@ -20,7 +20,7 @@ const Accordion = ({ humanReview, title, score, level, packetID }) => {
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
         <div className="title-right">
           <div></div>
-          <div>{title}</div>
+          <div>Applicant: {title}</div>
         </div>
         <div className='title-left'>
           <div classname="accordion-score">{score}</div>

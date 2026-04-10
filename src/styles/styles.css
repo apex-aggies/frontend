@@ -13,8 +13,18 @@
   background-color: #f5faff;
   max-width: 620px;
   margin: 2rem auto;
-  max-height: 480px;
+  height: 720px;
   overflow-y: auto;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a4f63;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #b8dff0;
+  letter-spacing: 0.5px;
 }
 
 /* Scrollbar */
